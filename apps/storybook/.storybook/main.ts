@@ -17,12 +17,10 @@ const config: StorybookConfig = {
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   addons: [
-    getAbsolutePath("@chromatic-com/storybook"),
-    getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-themes"),
   ],
   framework: {
-    name: getAbsolutePath("@storybook/nextjs"),
+    name: "@storybook/nextjs" as any,
     options: {},
   },
   staticDirs: ["../public"],

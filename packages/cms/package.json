@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "basehub dev",
+    "dev": "basehub dev || echo 'CMS skipped: BASEHUB_TOKEN not set'",
     "build": "basehub build",
     "analyze": "basehub",
     "clean": "git clean -xdf .cache .turbo dist node_modules",

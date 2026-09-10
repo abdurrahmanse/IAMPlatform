@@ -29,5 +29,25 @@ const RootLayout = ({ children }: RootLayoutProperties) => (
     </body>
   </html>
 );
+const RootLayout = ({ children }: RootLayoutProperties) => {
+  const webUrl = env.NEXT_PUBLIC_WEB_URL ?? "http://localhost:3001";
+
+  return (
+    <html className={fonts} lang="en" suppressHydrationWarning>
+      <body>
+        <AnalyticsProvider>
+          <DesignSystemProvider
+            helpUrl={env.NEXT_PUBLIC_DOCS_URL}
+            privacyUrl={new URL("/legal/privacy", webUrl).toString()}
+            termsUrl={new URL("/legal/terms", webUrl).toString()}
+          >
+            {children}
+          </DesignSystemProvider>
+        </AnalyticsProvider>
+        <Toolbar />
+      </body>
+    </html>
+  );
+};
 
 export default RootLayout;

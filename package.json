@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev",
+    "dev": "turbo dev --continue",
     "check": "ultracite check",
     "fix": "ultracite fix",
     "test": "turbo test",
