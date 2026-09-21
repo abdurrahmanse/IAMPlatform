@@ -1,6 +1,6 @@
 ---
 title: Database
-description: How the database and ORM are configured in next-forge.
+description: How the database and ORM are configured in IAMPlatform.
 type: reference
 product: Database
 summary: How the database and ORM are configured.
@@ -8,7 +8,7 @@ related:
   - /docs/apps/studio
 ---
 
-next-forge aims to provide a robust, type-safe database client that makes it easy to work with your database while maintaining strong typing throughout your application. We aim to support tooling that:
+IAMPlatform aims to provide a robust, type-safe database client that makes it easy to work with your database while maintaining strong typing throughout your application. We aim to support tooling that:
 
 - Provide a declarative way to define your database schema
 - Generate type-safe database client
@@ -17,7 +17,7 @@ next-forge aims to provide a robust, type-safe database client that makes it eas
 
 ## Default Configuration
 
-By default, next-forge uses [Neon](https://neon.tech) as its database provider and [Prisma](https://prisma.io) as its ORM. However, you can easily switch to other providers if you'd prefer, for example:
+By default, IAMPlatform uses [Neon](https://neon.tech) as its database provider and [Prisma](https://prisma.io) as its ORM. However, you can easily switch to other providers if you'd prefer, for example:
 
 - You can use other ORMs like [Drizzle](/docs/migrations/database/drizzle), Kysely or any other type-safe ORM.
 - You can use other database providers like [PlanetScale](/docs/migrations/database/planetscale), [Prisma Postgres](/docs/migrations/database/prisma-postgres), [Supabase](/docs/migrations/database/supabase), [EdgeDB](/docs/migrations/database/edgedb), or any other PostgreSQL/MySQL provider.
@@ -86,4 +86,4 @@ This uses `prisma db push` to push schema changes directly to the database witho
 
 ## Visual database editor
 
-next-forge includes a [visual database editor](/docs/apps/studio) that allows you to view and edit your database records.
+IAMPlatform includes a [visual database editor](/docs/apps/studio) that allows you to view and edit your database records.

@@ -97,7 +97,16 @@ export const generateMetadata = async ({
     title: page.data.title,
     description: page.data.description,
     openGraph: {
-      images: getPageImage(page).url,
+      title: page.data.title,
+      description: page.data.description,
+      images: [getPageImage(page).url],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.data.title,
+      description: page.data.description,
+      images: [getPageImage(page).url],
     },
     alternates: {
       types: {

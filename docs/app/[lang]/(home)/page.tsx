@@ -5,9 +5,9 @@ import { Features } from "./components/features";
 import { Hero } from "./components/hero";
 
 export const metadata: Metadata = {
-  title: "Production-grade Turborepo template for Next.js apps | next-forge",
+  title: "IAMPlatform - Comprehensive Identity and Access Management",
   description:
-    "A monorepo template designed to have everything you need to build your new SaaS app as thoroughly as possible. Free and open source, forever.",
+    "A production-grade Identity and Access Management platform designed to secure and streamline your applications.",
 };
 
 const Home = () => (

@@ -4,7 +4,7 @@ import { CopyIcon } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 
-const command = "npx next-forge@latest init";
+const command = "git clone https://github.com/abdurrahmanse/IAMPlatform";
 
 export const Installer = () => {
   const handleCopy = () => {

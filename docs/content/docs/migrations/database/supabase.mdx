@@ -9,13 +9,13 @@ prerequisites:
 
 [Supabase](https://supabase.com) is an open source Firebase alternative providing a Postgres database, Authentication, instant APIs, Edge Functions, Realtime subscriptions, and Storage.
 
-`next-forge` uses Neon as the database provider with Prisma as the ORM as well as Clerk for authentication. This guide will provide the steps you need to switch the database provider from Neon to Supabase. This guide is based on a few existing resources, including [Supabase's guide](https://supabase.com/partners/integrations/prisma) and [Prisma's guide](https://www.prisma.io/docs/orm/overview/databases/supabase).
+`IAMPlatform` uses Neon as the database provider with Prisma as the ORM as well as Clerk for authentication. This guide will provide the steps you need to switch the database provider from Neon to Supabase. This guide is based on a few existing resources, including [Supabase's guide](https://supabase.com/partners/integrations/prisma) and [Prisma's guide](https://www.prisma.io/docs/orm/overview/databases/supabase).
 
 <Note>
  For authentication, see the [Supabase Auth migration guide](/docs/migrations/authentication/supabase) to switch from Clerk to Supabase Auth with organization management, user roles, and more.
 </Note>
 
-Here's how to switch from Neon to [Supabase](https://supabase.com) for your `next-forge` project.
+Here's how to switch from Neon to [Supabase](https://supabase.com) for your `IAMPlatform` project.
 
 ## 1. Sign up to Supabase
 
@@ -90,7 +90,7 @@ datasource db {
 You don't need `relationMode = "prisma"` here — Supabase is PostgreSQL and supports foreign keys natively. Only add it if you specifically need Prisma to emulate relations (e.g., for compatibility with databases that don't support foreign keys).
 </Note>
 
-Now you can run the migration from the root of your `next-forge` project:
+Now you can run the migration from the root of your `IAMPlatform` project:
 
 ```sh title="Terminal"
 bun run migrate

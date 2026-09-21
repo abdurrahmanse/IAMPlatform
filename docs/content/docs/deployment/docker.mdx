@@ -1,8 +1,8 @@
 ---
 title: Deploying with Docker
-description: How to deploy next-forge with Docker for self-hosting.
+description: How to deploy IAMPlatform with Docker for self-hosting.
 type: guide
-summary: How to deploy next-forge with Docker for self-hosting.
+summary: How to deploy IAMPlatform with Docker for self-hosting.
 prerequisites:
   - /docs/setup/env
 related:
@@ -10,7 +10,7 @@ related:
   - /docs/deployment/netlify
 ---
 
-Docker lets you self-host next-forge on any platform that supports containers — such as [Railway](https://railway.app), [Fly.io](https://fly.io), [Coolify](https://coolify.io), [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform), or your own server.
+Docker lets you self-host IAMPlatform on any platform that supports containers — such as [Railway](https://railway.app), [Fly.io](https://fly.io), [Coolify](https://coolify.io), [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform), or your own server.
 
 ## Enable standalone output
 
@@ -104,10 +104,10 @@ Build and run the image for a specific app by passing the `APP_NAME` build argum
 
 ```bash
 # Build the app
-docker build --build-arg APP_NAME=app -t next-forge-app .
+docker build --build-arg APP_NAME=app -t IAMPlatform-app .
 
 # Run it
-docker run -p 3000:3000 --env-file .env.local next-forge-app
+docker run -p 3000:3000 --env-file .env.local IAMPlatform-app
 ```
 
 Repeat for `web` and `api` if you want to deploy all three.
@@ -157,6 +157,6 @@ docker compose up --build
 
 ## Environment variables
 
-When deploying with Docker, pass your environment variables at runtime using `--env-file` or `-e` flags. Do not bake secrets into the image. Learn more about how [environment variables](/docs/setup/env) work in next-forge.
+When deploying with Docker, pass your environment variables at runtime using `--env-file` or `-e` flags. Do not bake secrets into the image. Learn more about how [environment variables](/docs/setup/env) work in IAMPlatform.
 
 If certain variables are needed at build time (e.g. `DATABASE_URL` for Prisma), uncomment the relevant `ARG` and `ENV` lines in the builder stage.

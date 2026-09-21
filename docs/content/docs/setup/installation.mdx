@@ -1,8 +1,8 @@
 ---
 title: Installation
-description: How to setup, install and run next-forge.
+description: How to setup, install and run IAMPlatform.
 type: guide
-summary: Step-by-step instructions for installing next-forge.
+summary: Step-by-step instructions for installing IAMPlatform.
 prerequisites:
   - /docs/setup/prerequisites
 related:
@@ -12,18 +12,18 @@ related:
 
 ## Initialization
 
-Run the `next-forge` init command:
+Run the `IAMPlatform` init command:
 
 ```package-install
-npx next-forge@latest init
+npx IAMPlatform@latest init
 ```
 
 You will be prompted for the project name and package manager.
 
 ```sh title="Terminal"
-$ npx next-forge@latest init
+$ npx IAMPlatform@latest init
 
-┌  Let's start a next-forge project!
+┌  Let's start a IAMPlatform project!
 │
 ◇  What is your project named?
 │  my-app
@@ -46,13 +46,13 @@ You will need to scaffold the database using the schema defined in `packages/dat
 npm run migrate
 ```
 
-For more details on the default Prisma configuration (using Neon), refer to the [Database Configuration Guide](https://www.next-forge.com/packages/database#default-configuration).
+For more details on the default Prisma configuration (using Neon), refer to the [Database Configuration Guide](https://www.IAMPlatform.com/packages/database#default-configuration).
 
 ## CMS
 
 You will need to setup the CMS. Follow the instructions [here](/docs/packages/cms/overview), but the summary is:
 
-1. Fork the [`basehub/next-forge`](https://basehub.com/basehub/next-forge?fork=1) template
+1. Fork the [`basehub/IAMPlatform`](https://basehub.com/basehub/IAMPlatform?fork=1) template
 2. Get your Read Token from the "Connect to Your App" page
 3. Add the `BASEHUB_TOKEN` to your [Environment Variables](/docs/setup/env)
 

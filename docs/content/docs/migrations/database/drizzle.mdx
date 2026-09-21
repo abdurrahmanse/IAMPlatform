@@ -79,7 +79,7 @@ npx drizzle-kit pull
 
 This should pull the schema from the database, creating a `schema.ts` file containing the table definitions and some other files.
 
-If the generated `schema.ts` is empty, your database likely has no tables yet. You can either push your Prisma schema first (`npx prisma db push`) and re-run the pull, or create the schema manually. For example, the default next-forge `Page` model translates to:
+If the generated `schema.ts` is empty, your database likely has no tables yet. You can either push your Prisma schema first (`npx prisma db push`) and re-run the pull, or create the schema manually. For example, the default IAMPlatform `Page` model translates to:
 
 ```ts title="packages/database/schema.ts"
 import { pgTable, serial, text } from 'drizzle-orm/pg-core';

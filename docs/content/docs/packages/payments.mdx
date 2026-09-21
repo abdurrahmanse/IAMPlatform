@@ -1,6 +1,6 @@
 ---
 title: Payments
-description: How next-forge handles payments and billing.
+description: How IAMPlatform handles payments and billing.
 type: reference
 product: Payments
 summary: How payments and billing are configured with Stripe.
@@ -8,7 +8,7 @@ related:
   - /docs/packages/webhooks/inbound
 ---
 
-next-forge uses [Stripe](https://stripe.com/) by default for payments and billing. Implementing Stripe in your project is straightforward.
+IAMPlatform uses [Stripe](https://stripe.com/) by default for payments and billing. Implementing Stripe in your project is straightforward.
 
 Stripe is an optional integration. If `STRIPE_SECRET_KEY` is not set, the `stripe` export will be `undefined` and payment webhooks will be skipped.
 
@@ -26,13 +26,13 @@ await stripe?.prices.list();
 
 ## Webhooks
 
-next-forge has a pre-built webhook handler for payment events. Read more about [inbound payment webhooks](/docs/packages/webhooks/inbound#payment-events).
+IAMPlatform has a pre-built webhook handler for payment events. Read more about [inbound payment webhooks](/docs/packages/webhooks/inbound#payment-events).
 
 ## Anti-Fraud
 
 As your app grows, you will inevitably encounter credit card fraud. [Stripe Radar](https://stripe.com/radar) is enabled by default if you integrate payments using their SDK as described above. This provides a set of tools to help you detect and prevent fraud.
 
-Stripe Radar supports more [advanced anti-fraud features](https://docs.stripe.com/disputes/prevention/advanced-fraud-detection) if you embed the Stripe JS script in every page load. This is not enabled by default in next-forge, but you can add it as follows:
+Stripe Radar supports more [advanced anti-fraud features](https://docs.stripe.com/disputes/prevention/advanced-fraud-detection) if you embed the Stripe JS script in every page load. This is not enabled by default in IAMPlatform, but you can add it as follows:
 
 <Steps>
   <Step title="Edit the layout">
