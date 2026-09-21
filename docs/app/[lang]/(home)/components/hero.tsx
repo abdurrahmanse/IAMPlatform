@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "motion/react";
 import type { ComponentProps } from "react";
 import { Button } from "@/components/ui/button";
 import { Installer } from "./installer";
@@ -50,17 +53,32 @@ const TurborepoLogo = (props: ComponentProps<"svg">) => (
 
 export const Hero = () => (
   <section className="flex flex-col items-center justify-center gap-6 px-4 py-16 sm:px-16 sm:py-24">
-    <h1 className="max-w-3xl text-balance text-center font-semibold text-4xl leading-tight tracking-tighter! sm:text-5xl md:max-w-4xl md:text-6xl lg:leading-[1.1]">
+    <motion.h1 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="max-w-3xl text-balance text-center font-semibold text-4xl leading-tight tracking-tighter! sm:text-5xl md:max-w-4xl md:text-6xl lg:leading-[1.1]"
+    >
       Comprehensive Identity & Access Management Platform
-    </h1>
-    <p className="max-w-xl text-balance text-center text-muted-foreground md:max-w-2xl md:text-lg">
+    </motion.h1>
+    <motion.p 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.1 }}
+      className="max-w-xl text-balance text-center text-muted-foreground md:max-w-2xl md:text-lg"
+    >
       Secure, manage, and scale your application's identities with ease. A unified solution for modern authentication and authorization.
-    </p>
-    <div className="mx-auto flex w-full max-w-lg flex-col items-center gap-4 sm:flex-row">
+    </motion.p>
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className="mx-auto flex w-full max-w-lg flex-col items-center gap-4 sm:flex-row"
+    >
       <Installer />
       <Button asChild size="lg">
         <Link href="/docs">Read the docs</Link>
       </Button>
-    </div>
+    </motion.div>
   </section>
 );
