@@ -26,7 +26,6 @@ export const generateMetadata = async ({
 
 const Home = async ({ params }: HomeProps) => {
   const { locale } = await params;
-  const dictionary = await getDictionary(locale);
   const betaFeature = await showBetaFeature();
 
   return (
@@ -41,7 +40,7 @@ const Home = async ({ params }: HomeProps) => {
       <Projects />
       <Experience />
       <Skills />
-      <CTA dictionary={dictionary} />
+      <CTA />
     </>
   );
 };

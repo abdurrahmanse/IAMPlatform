@@ -1,13 +1,8 @@
 import { Button } from "@repo/design-system/components/ui/button";
-import type { Dictionary } from "@repo/internationalization";
 import { Mail } from "lucide-react";
 import Link from "next/link";
 
-interface CTAProps {
-  dictionary: Dictionary;
-}
-
-export const CTA = ({ dictionary }: CTAProps) => (
+export const CTA = () => (
   <section className="w-full bg-foreground py-20 text-background lg:py-40">
     <div className="container mx-auto px-4">
       <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">

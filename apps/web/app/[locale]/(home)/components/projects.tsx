@@ -34,11 +34,11 @@ export const Projects = () => {
         </h2>
 
         <div className="flex flex-col">
-          {PROJECTS.map((project, idx) => (
+          {PROJECTS.map((project) => (
             <Link
               className="group -mx-4 flex flex-col justify-between border-border border-b px-4 py-10 transition-colors hover:bg-muted/50 md:flex-row md:items-center"
               href={project.link}
-              key={idx}
+              key={project.title}
             >
               <div className="flex max-w-2xl flex-col gap-2">
                 <h3 className="font-bold text-3xl tracking-tight underline-offset-4 group-hover:underline">

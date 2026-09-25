@@ -29,16 +29,16 @@ export const Skills = () => {
         </h2>
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-          {SKILL_CATEGORIES.map((category, idx) => (
-            <div className="flex flex-col gap-6" key={idx}>
+          {SKILL_CATEGORIES.map((category) => (
+            <div className="flex flex-col gap-6" key={category.title}>
               <h3 className="border-foreground border-b pb-4 font-bold text-2xl uppercase tracking-widest">
                 {category.title}
               </h3>
               <ul className="flex flex-col gap-4">
-                {category.skills.map((skill, skillIdx) => (
+                {category.skills.map((skill) => (
                   <li
                     className="text-lg text-muted-foreground transition-colors hover:text-foreground"
-                    key={skillIdx}
+                    key={skill}
                   >
                     {skill}
                   </li>

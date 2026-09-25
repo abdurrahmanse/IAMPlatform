@@ -33,8 +33,8 @@ export const Experience = () => {
             </h2>
           </div>
           <div className="flex flex-col gap-12 lg:col-span-8">
-            {EXPERIENCE.map((exp, idx) => (
-              <div className="flex flex-col gap-4" key={idx}>
+            {EXPERIENCE.map((exp) => (
+              <div className="flex flex-col gap-4" key={exp.company}>
                 <div className="flex flex-col justify-between gap-2 md:flex-row md:items-center">
                   <h3 className="font-bold text-2xl">{exp.role}</h3>
                   <span className="border border-border bg-background px-3 py-1 font-mono text-muted-foreground text-sm">
