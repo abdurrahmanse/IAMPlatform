@@ -2,13 +2,12 @@ import { showBetaFeature } from "@repo/feature-flags";
 import { getDictionary } from "@repo/internationalization";
 import { createMetadata } from "@repo/seo/metadata";
 import type { Metadata } from "next";
-import { Cases } from "./components/cases";
+import { About } from "./components/about";
 import { CTA } from "./components/cta";
-import { FAQ } from "./components/faq";
-import { Features } from "./components/features";
+import { Experience } from "./components/experience";
 import { Hero } from "./components/hero";
-import { Stats } from "./components/stats";
-import { Testimonials } from "./components/testimonials";
+import { Projects } from "./components/projects";
+import { Skills } from "./components/skills";
 
 interface HomeProps {
   params: Promise<{
@@ -33,16 +32,15 @@ const Home = async ({ params }: HomeProps) => {
   return (
     <>
       {betaFeature && (
-        <div className="w-full bg-black py-2 text-center text-white">
-          Beta feature now available
+        <div className="w-full bg-foreground py-2 text-center text-background font-medium tracking-wide uppercase text-xs">
+          Available for new opportunities in 2026
         </div>
       )}
-      <Hero dictionary={dictionary} />
-      <Cases dictionary={dictionary} />
-      <Features dictionary={dictionary} />
-      <Stats dictionary={dictionary} />
-      <Testimonials dictionary={dictionary} />
-      <FAQ dictionary={dictionary} />
+      <Hero />
+      <About />
+      <Projects />
+      <Experience />
+      <Skills />
       <CTA dictionary={dictionary} />
     </>
   );
