@@ -16,9 +16,7 @@ const config: StorybookConfig = {
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
-  addons: [
-    getAbsolutePath("@storybook/addon-themes"),
-  ],
+  addons: [getAbsolutePath("@storybook/addon-themes")],
   framework: {
     name: "@storybook/nextjs" as any,
     options: {},
