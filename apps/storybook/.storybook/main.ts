@@ -18,7 +18,7 @@ const config: StorybookConfig = {
   ],
   addons: [getAbsolutePath("@storybook/addon-themes")],
   framework: {
-    name: "@storybook/nextjs" as any,
+    name: "@storybook/nextjs",
     options: {},
   },
   staticDirs: ["../public"],

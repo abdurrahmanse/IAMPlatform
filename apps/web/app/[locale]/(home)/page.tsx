@@ -24,8 +24,7 @@ export const generateMetadata = async ({
   return createMetadata(dictionary.web.home.meta);
 };
 
-const Home = async ({ params }: HomeProps) => {
-  const { locale } = await params;
+const Home = async () => {
   const betaFeature = await showBetaFeature();
 
   return (
